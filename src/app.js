@@ -8,14 +8,12 @@ const theatersRouter = require("./theaters/theaters.router")
 //allow express to accept json payloads
 app.use(express.json())
 
-// all the routes
+// Route routes
+app.use("/movies", moviesRouter)
+app.use("/reviews", reviewsRouter)
+app.use("/theaters", theatersRouter)
 
-
-
-// all
-
-
-
+// Error handlers
 
 
 module.exports = app;
