@@ -6,6 +6,7 @@ exports.up = function(knex) {
     table.string("address_line_1")
     table.string("address_line_2")
     table.string("city")
+    table.string("state")
     table.string("zip")
     table.timestamps(true, true)
   })
