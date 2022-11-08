@@ -17,10 +17,15 @@ async function validateMovieExists(req, res, next) {
 
 // list method 
 async function list (req, res, next) {
-    const data = await moviesService.list()
-    res.json({ data })
+    const { is_showing } = req.query
+    if(is_showing === "true") {
+        const showingMovies = await service.listShowingMovies(true)
+        res.json({ data: showingMovies })    
+    } else {
+        const showingMovies = await service.list()
+        res.json({ data: showingMovies })
+    }
 }
-
 // read method
 async function read(req, res, next) {
     res.json({ data: res.locals.movie })
@@ -32,4 +37,5 @@ module.exports = {
         asyncErrorBoundary(validateMovieExists),
         asyncErrorBoundary(read)
     ],
+    validateMovieExists,
 }

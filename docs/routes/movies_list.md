@@ -4,8 +4,8 @@ This route will return a list of all movies. Different query parameters will all
 
 There are two different cases to consider:
 
-- `GET /movies`
-- `GET /movies?is_showing=true`
+- `GET /movies` done
+- `GET /movies?is_showing=true` done
 
 ### GET /movies
 

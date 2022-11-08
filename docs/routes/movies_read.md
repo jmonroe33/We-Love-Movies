@@ -4,8 +4,8 @@ This route will return a single movie by ID.
 
 There are four different cases to consider:
 
-- `GET /movies/:movieId`
-- `GET /movies/:movieId` (incorrect ID)
+- `GET /movies/:movieId` done
+- `GET /movies/:movieId` (incorrect ID) done
 - `GET /movies/:movieId/theaters`
 - `GET /movies/:movieId/reviews`
 
