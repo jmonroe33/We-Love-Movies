@@ -6,8 +6,9 @@ const reviewsRouter = require("./reviews/reviews.router")
 const theatersRouter = require("./theaters/theaters.router")
 const notFound = require("./errors/notFound")
 const errorHandler = require("./errors/errorHandler")
-
+const cors = require("cors")
 //allow express to accept json payloads
+app.use(cors())
 app.use(express.json())
 
 // Route routes
